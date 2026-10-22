@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Automatically reads the shortcut name from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const shortcutName = urlParams.get('name');
+        if (shortcutName) {
+            window.location.href = `shortcuts://run-shortcut?name=${encodeURIComponent(shortcutName)}`;
+        }
+    </script>
+</head>
+<body>
+    <p>Launching shortcut...</p>
+</body>
+</html>
